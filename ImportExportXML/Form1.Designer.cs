@@ -28,13 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnChooseFile = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.lblFileName = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // btnChooseFile
+            // 
+            this.btnChooseFile.Location = new System.Drawing.Point(138, 227);
+            this.btnChooseFile.Name = "btnChooseFile";
+            this.btnChooseFile.Size = new System.Drawing.Size(75, 23);
+            this.btnChooseFile.TabIndex = 0;
+            this.btnChooseFile.Text = "Välj fil...";
+            this.btnChooseFile.UseVisualStyleBackColor = true;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(320, 227);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 1;
+            this.btnExport.Text = "Exportera";
+            this.btnExport.UseVisualStyleBackColor = true;
+            // 
+            // lblFileName
+            // 
+            this.lblFileName.AutoSize = true;
+            this.lblFileName.Location = new System.Drawing.Point(138, 208);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(65, 13);
+            this.lblFileName.TabIndex = 2;
+            this.lblFileName.Text = "Exempel.xml";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblFileName);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnChooseFile);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnChooseFile;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Label lblFileName;
     }
 }
 
