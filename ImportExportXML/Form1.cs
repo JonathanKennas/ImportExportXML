@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
-// Lägg till referens Microsoft Excel Object Library
-//using Microsoft.Office.Interop.Excel;
+// Referens Microsoft Excel Object Library
+using Microsoft.Office.Interop.Excel;
 
 // Länk till exempel: https://www.c-sharpcorner.com/article/convert-xml-file-to-excel-file/
 
@@ -18,8 +18,6 @@ namespace ImportExportXML
 {
     public partial class Form1 : Form      
     {
-        Import import;
-
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +25,16 @@ namespace ImportExportXML
 
         private void btnChooseFile_Click(object sender, EventArgs e)
         {
-            import.imoprtFile();
+            try
+            {
+                DialogResult drResult = OFD.ShowDialog();
+                if (drResult == System.Windows.Forms.DialogResult.OK)
+                    txtbExcelFileName.Text = OFD.FileName;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Filen gick inte att importera. " + ex.Message);
+            }
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
