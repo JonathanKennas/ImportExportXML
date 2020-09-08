@@ -16,5 +16,15 @@ namespace ImportExportXML
         {
             InitializeComponent();
         }
+
+        private void btnChooseFile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

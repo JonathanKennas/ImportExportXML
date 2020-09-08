@@ -41,6 +41,7 @@
             this.btnChooseFile.TabIndex = 0;
             this.btnChooseFile.Text = "Välj fil...";
             this.btnChooseFile.UseVisualStyleBackColor = true;
+            this.btnChooseFile.Click += new System.EventHandler(this.btnChooseFile_Click);
             // 
             // btnExport
             // 
@@ -50,6 +51,7 @@
             this.btnExport.TabIndex = 1;
             this.btnExport.Text = "Exportera";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // lblFileName
             // 
